@@ -1,0 +1,576 @@
+/* #############################################################################
+###############################   COLORS CHART   ###############################
+############################################################################## */
+
+/*
+#F06292 #F48FB1 #EF9A9A #FF80AB #FF8598 #FFC0A9 #FFCDD2
+
+Blush : #EDB4B4
+Carnation : #EDA1A1
+Flamingo : #EC7878
+Strawberry : #EC5D5D
+Lime : #C9D787
+Light olive : #9CAC3A
+Olive : #869530         (old #818F2F & #7D8A2E)
+Pearl grey : #E0E0E0
+Stone : #9E9E9E
+Anthracite : #424242
+Porcelain : #FAFAFA
+*/
+
+
+
+
+/* #############################################################################
+##################################   GENERAL   #################################
+############################################################################## */
+
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/*html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q,
+samp, small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}*/
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+
+/* =============================================================================
+   Basic container
+============================================================================== */
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+  width: 90%;
+  /*padding-top: 20px;*/
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 80%;
+  }
+}
+
+
+/* =============================================================================
+   Row & columns
+============================================================================== */
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.row:after {
+  content: "";
+  /*display: table;*/
+  clear: both;
+}
+
+.col-1,
+.col-2,
+.col-11,
+.col-third,
+.col-half,
+.col-full {
+  margin-left: 0 auto;
+  left: auto;
+  right: auto;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-third {
+  width: 33.3333333333%;
+}
+
+.col-half {
+  width: 50%
+}
+
+.col-full {
+  width: 100%;
+}
+
+
+/* =============================================================================
+   Helpers media query classes
+============================================================================== */
+@media only screen and (max-width: 600px) {
+  .center-on-small {
+    text-align: center;
+  }
+}
+
+/* *****************************************************************************
+    Displaying classes
+***************************************************************************** */
+@media only screen and (max-width: 600px) {
+  .display-on-small {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .display-on-medium {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .display-on-medium-and-down {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .display-on-medium-and-up {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .display-on-large {
+    display: block !important;
+  }
+}
+
+
+/* *****************************************************************************
+    Hiding classes
+***************************************************************************** */
+@media only screen and (max-width: 600px) {
+  .hide-on-small, .hide-on-small-and-down {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .hide-on-med {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .hide-on-med-and-down {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .hide-on-med-and-up {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .hide-on-large {
+    display: none !important;
+  }
+}
+
+
+/* =============================================================================
+   Responsive text
+============================================================================== */
+.responsive-text {
+  text-align: justify;
+}
+
+@media only screen and (min-width: 320px) {
+  .responsive-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .responsive-text {
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .responsive-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .responsive-text {
+    font-size: 1.248rem;
+  }
+}
+
+
+/* #############################################################################
+###############################   MOBILE MENU   ###############################
+############################################################################## */
+
+.mobile-menu-toggled {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Mobile menu bar
+============================================================================== */
+.mobile-menu-bar {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* =============================================================================
+   Mobile menu button
+============================================================================== */
+.mobile-menu-open-button {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: -0.15px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  vertical-align: bottom;
+}
+
+.mobile-menu-close-button {
+  padding: 15px 25px;
+}
+
+.mobile-menu-open-button,
+.mobile-menu-close-button {
+  width: 100%;
+  display: block;
+  /*padding: 15px 25px;*/
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+  background-color: #EC5D5D;
+  color: #FAFAFA;
+}
+
+.mobile-menu-open-button:focus,
+.mobile-menu-close-button:focus {
+  outline: 0;
+}
+
+/* =============================================================================
+   Menu mobile background
+============================================================================== */
+.mobile-menu-background {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  background-color: #000000;
+  opacity: 0;
+  transition: opacity 300ms, width 0s 300ms, height 0s 300ms;
+  -webkit-transition: opacity 300ms, width 0s 300ms, height 0s 300ms;
+}
+
+.mobile-menu-background.toggled {
+  width: 100%;
+  height: 100%;
+  opacity: 0.65;
+  transition: opacity 300ms;
+  -webkit-transition: opacity 300ms;
+}
+
+/* =============================================================================
+   Mobile menu
+============================================================================== */
+.mobile-menu {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  /*overflow-y: scroll;*/
+  z-index: 99999;
+  transform: translateX(-100%);
+  transition: transform 300ms;
+  background-color: #EC7878;
+}
+
+@media only screen and (min-width: 320px) {
+  .mobile-menu {
+    width: 300px;
+    transform: translateX(-300px);
+  }
+}
+
+.mobile-menu.toggled {
+  transform: translateX(0);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu ul > li > a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 25px;
+  color: #FAFAFA;
+  border-top: solid 1px #EDB4B4;
+  border-bottom: solid 1px #EC5D5D;
+}
+
+.mobile-menu ul > li > a:hover {
+  background-color: #EDA1A1;
+}
+
+
+
+
+/* #############################################################################
+############################   LARGE DEVICES MENU   ############################
+############################################################################## */
+
+.desktop-menu {
+  position: fixed;
+  top: 2vh;
+  overflow: hidden;
+  background-color: #869530;
+}
+
+@media only screen and (min-width: 993px) {
+  .desktop-menu {
+    left: 2vw;
+    width: 140px;
+    font-size: 85%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .desktop-menu {
+    left: 2vw;
+    width: 140px;
+    font-size: 87.5%;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  .desktop-menu {
+    left: 2.5vw;
+    width: 150px;
+    font-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .desktop-menu {
+    left: 3vw;
+    width: 152.5px;
+    font-size: 92.5%;
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  .desktop-menu {
+    left: 3.5vw;
+    width: 155px;
+    font-size: 95%;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .desktop-menu {
+    left: 4vw;
+    width: 160px;
+    font-size: 97.5%;
+  }
+}
+
+@media only screen and (min-width: 1320px) {
+  .desktop-menu {
+    left: 4.5vw;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1430px) {
+  .desktop-menu {
+    left: 5vw;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .desktop-menu {
+    left: 5.5vw;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1540px) {
+  .desktop-menu {
+    left: 6vw;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1580px) {
+  .desktop-menu {
+    left: 6.5vw;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1620px) {
+  .desktop-menu {
+    left: 14vh;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  .desktop-menu {
+    left: 15vh;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1720px) {
+  .desktop-menu {
+    left: 18vh;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1780px) {
+  .desktop-menu {
+    left: 21vh;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1820px) {
+  .desktop-menu {
+    left: 23vh;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1880px) {
+  .desktop-menu {
+    left: 27vh;
+    width: 160px;
+    font-size: 100%;
+  }
+}
+
+.desktop-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.desktop-menu ul > li > a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 25px;
+  color: #FAFAFA;
+  border-top: solid 1px #C1D545;
+  border-bottom: solid 1px #646f24;
+}
+
+.desktop-menu ul > li > a:hover {
+  background-color: #9CAC3A;
+}
+
+
+
+
+/* #############################################################################
+##############################   BLOCKS CONTENT   ##############################
+############################################################################## */
+
+.container-content {
+  margin: 0 auto;
+  position: relative;
+  width: 95%;
+  padding-top: 65px;
+}
+
+@media only screen and (min-width: 450px) {
+  .container-content {
+    width: 92.5%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container-content {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .container-content {
+    width: 80%;
+    padding-top: 2vh;
+  }
+}
